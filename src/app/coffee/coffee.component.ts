@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -8,9 +9,19 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class CoffeeComponent implements OnInit {
 
-  constructor() { }
+  // local variables
+  activeRouteSubs: any;
+  
+  constructor(private _actRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.activeRouteSubs = this._actRoute.params.subscribe(params => {
+      // console.log(params['id']);
+    })
+  }
+
+  ngOnDestroy() {
+    this.activeRouteSubs.unSubscribe();
   }
 
 }
