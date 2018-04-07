@@ -1,5 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-coffee',
@@ -7,17 +7,17 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./coffee.component.scss']
 })
-export class CoffeeComponent implements OnInit {
+export class CoffeeComponent implements OnInit, OnDestroy {
 
   // local variables
   activeRouteSubs: any;
-  
+
   constructor(private _actRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activeRouteSubs = this._actRoute.params.subscribe(params => {
       // console.log(params['id']);
-    })
+    });
   }
 
   ngOnDestroy() {
