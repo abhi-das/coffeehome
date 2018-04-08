@@ -10,9 +10,9 @@ export class Coffee {
 
     // Receiving args is making args mandatory to initialize any class.
     // No default values are being set.
-    
-    constructor(public name: string = '', 
-        public cafeName: string = '', 
+
+    constructor(public name: string = '',
+        public cafeName: string = '',
         public location: CoffeeLocation = null) {
 
             this.location = new CoffeeLocation();

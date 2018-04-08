@@ -20,8 +20,8 @@ export class CoffeeListComponent implements OnInit {
     // Initialize Coffee class with required fields only on component load
 
     this.coffeeList = [
-      new Coffee('Frape', 'Bubble Cafe', new CoffeeLocation('25 Parkway Forest Drv.','Toronto')),
-      new Coffee('Americano', 'Beach Cafe', new CoffeeLocation('153, Layton Ave.','Toronto'))
+      new Coffee('Frape', 'Bubble Cafe', new CoffeeLocation('25 Parkway Forest Drv.', 'Toronto')),
+      new Coffee('Americano', 'Beach Cafe', new CoffeeLocation('153, Layton Ave.', 'Toronto'))
     ];
 
   }
