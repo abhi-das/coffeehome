@@ -1,25 +1,14 @@
-<mat-card>
+<mat-card *ngFor="let coffeeItem of coffeeList">
   <mat-card-title>
-    Coffee Name
+   {{coffeeItem.name}}
   </mat-card-title>
   <mat-card-subtitle>
-    Place: Coffee Shop
+    {{coffeeItem.cafeName}}
   </mat-card-subtitle>
   <button mat-button><mat-icon>map</mat-icon></button>
   <button mat-button><mat-icon>share</mat-icon></button>
   <button mat-button><mat-icon>list</mat-icon></button>
 </mat-card>
 
-<mat-card>
-  <mat-card-title>
-    Coffee Name
-  </mat-card-title>
-  <mat-card-subtitle>
-    Place: Coffee Shop
-  </mat-card-subtitle>
-  <button mat-button><mat-icon>map</mat-icon></button>
-  <button mat-button><mat-icon>share</mat-icon></button>
-  <button mat-button><mat-icon>list</mat-icon></button>
-</mat-card>
 
 <a class="coffee__create" routerLink="/coffee"><mat-icon>create</mat-icon></a>

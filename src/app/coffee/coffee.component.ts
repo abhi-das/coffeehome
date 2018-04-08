@@ -1,3 +1,5 @@
+import { TestingRating } from '../coffee-model/TestingRating';
+import { Coffee } from '../coffee-model/coffee';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 
@@ -7,17 +9,19 @@ import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./coffee.component.scss']
 })
+
 export class CoffeeComponent implements OnInit, OnDestroy {
 
   // local variables
   activeRouteSubs: any;
-  coffee: any;
+  coffee: Coffee;
   opts = ['Coffee A', 'Coffee B', 'Coffee C'];
 
   constructor(private _actRoute: ActivatedRoute, private _router: Router) { }
 
   ngOnInit() {
-    this.coffee = { location: {}, testing: {} };
+    
+    this.coffee = new Coffee();
     this.activeRouteSubs = this._actRoute.params.subscribe(params => {
       // console.log(params['id']);
     });
@@ -30,9 +34,9 @@ export class CoffeeComponent implements OnInit, OnDestroy {
   testRatingChange(checked: boolean): void {
 
     if (checked) {
-      this.coffee.testing = {};
+      this.coffee.testingRating = new TestingRating();
     } else {
-      this.coffee.testing = null;
+      this.coffee.testingRating = null;
     }
   }
 
@@ -40,8 +44,6 @@ export class CoffeeComponent implements OnInit, OnDestroy {
     this._router.navigate(['/']);
   }
 
-  save(): void {
-
-  }
+  save(): void { }
 
 }

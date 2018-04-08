@@ -2,7 +2,9 @@
   <mat-card>
     {{coffee | json}}
   </mat-card>
+  
   <mat-card>
+    <!--About Coffee-->
     <mat-card-title>Coffee Information</mat-card-title>
     <mat-input-container>
       <input matInput type="text" placeholder="Coffee Name" name="name" [(ngModel)]="coffee.name">
@@ -13,6 +15,7 @@
   </mat-card>
 
   <mat-card>
+    <!--Coffee Location Info-->
     <mat-card-title>Place Information</mat-card-title>
     <mat-form-field>
       <input matInput type="text" placeholder="Address Name" name="address" [(ngModel)]="coffee.location.address">
@@ -23,39 +26,44 @@
   </mat-card>
 
   <mat-card>
+    <!--Coffee Rating Element-->
     <mat-card-title>Rating</mat-card-title>
     <mat-card-subtitle>Overall Rating</mat-card-subtitle>
-    <mat-slider max="10" name="rating" [(ngModel)]="coffee.rating" thumbLabel tickIntervel="1">
+      <mat-slider max="10" name="rating" [(ngModel)]="coffee.rating" thumbLabel tickIntervel="1">
     </mat-slider>
 
+    <!--Testing Rating Toggle ELement-->
     <mat-slide-toggle #testingSelector (change)="testRatingChange(testingSelector.checked)">Testing Rating</mat-slide-toggle>
 
+    <!--Group of Testing Rating Slider Elements-->
     <section id="rating" *ngIf="testingSelector.checked">
       <mat-label>Aroma</mat-label>
-      <mat-slider max="10" name="aromaRating" [(ngModel)]="coffee.testing.aroma" thumbLabel tickIntervel="1">
+      <mat-slider max="10" name="aromaRating" [(ngModel)]="coffee.testingRating.aroma" thumbLabel tickIntervel="1">
       </mat-slider>
 
       <mat-label>Flavor</mat-label>
-      <mat-slider max="10" name="flavorRating" [(ngModel)]="coffee.testing.flavor" thumbLabel tickIntervel="1">
+      <mat-slider max="10" name="flavorRating" [(ngModel)]="coffee.testingRating.flavor" thumbLabel tickIntervel="1">
       </mat-slider>
 
       <mat-label>Intensity</mat-label>
-      <mat-slider max="10" name="intensityRating" [(ngModel)]="coffee.testing.intensity" thumbLabel tickIntervel="1">
+      <mat-slider max="10" name="intensityRating" [(ngModel)]="coffee.testingRating.intensity" thumbLabel tickIntervel="1">
       </mat-slider>
 
       <mat-label>Sweetness</mat-label>
-      <mat-slider max="10" name="sweetnessRating" [(ngModel)]="coffee.testing.sweetness" thumbLabel tickIntervel="1">
+      <mat-slider max="10" name="sweetnessRating" [(ngModel)]="coffee.testingRating.sweetness" thumbLabel tickIntervel="1">
       </mat-slider>
     </section>
 
   </mat-card>
 
+  <!--Notes-->
   <mat-card>
     <mat-input-container>
       <textarea name="notes" [(ngModel)]="coffee.notes" placeholder="Notes" matInput></textarea>
     </mat-input-container>
   </mat-card>
 
+  <!--Coffee CTA-->
   <mat-card>
     <button mat-raised-button (click)="cancel()">Cancel</button>
     <button color="accent" mat-raised-button (click)="save()">Save</button>
