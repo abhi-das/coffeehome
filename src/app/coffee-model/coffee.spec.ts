@@ -7,7 +7,7 @@ describe('Coffee class testcase', () => {
 
     beforeEach(() => {
         coffe = new Coffee();
-    })
+    });
 
     it('should create coffee class', () => {
         expect(coffe).toBeTruthy();
