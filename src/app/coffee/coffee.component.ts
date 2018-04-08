@@ -30,14 +30,14 @@ export class CoffeeComponent implements OnInit, OnDestroy {
   testRatingChange(checked: boolean): void {
 
     if (checked) {
-      this.coffee.testing = {}
+      this.coffee.testing = {};
     } else {
       this.coffee.testing = null;
     }
   }
 
   cancel(): void {
-    this._router.navigate(["/"]);
+    this._router.navigate(['/']);
   }
 
   save(): void {
