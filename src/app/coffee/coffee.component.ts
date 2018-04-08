@@ -24,7 +24,7 @@ export class CoffeeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    //this.activeRouteSubs.unSubscribe();
+    // this.activeRouteSubs.unSubscribe();
   }
 
   testRatingChange(checked: boolean): void {
