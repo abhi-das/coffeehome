@@ -10,6 +10,7 @@ import 'hammerjs';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { CoffeeListComponent } from './coffee-list/coffee-list.component';
 import { AppRoutes } from './app.routes';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutes } from './app.routes';
   ],
   imports: [
     AppRoutes,
+    FormsModule,
     BrowserModule, BrowserAnimationsModule,
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule,
     MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule

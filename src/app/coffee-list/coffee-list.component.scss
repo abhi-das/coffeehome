@@ -1,5 +1,16 @@
 .coffee {
     &__create {
-       
+       background: #f74463;
+       color: #fff;
+       display: inline-block;
+       padding: .6em .7em;
+       border-radius: 50%;
+       position: fixed;
+       bottom: 1em;
+       right: 1em;
+       & .material-icons {
+           position: relative;
+           top: 1.5px;
+       }
     }
 }
