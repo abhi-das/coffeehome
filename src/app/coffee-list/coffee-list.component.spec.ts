@@ -2,13 +2,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CoffeeListComponent } from './coffee-list.component';
 
+import { AppMaterialModules } from '../app.material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
 describe('CoffeeListComponent', () => {
   let component: CoffeeListComponent;
   let fixture: ComponentFixture<CoffeeListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoffeeListComponent ]
+      imports: [ BrowserAnimationsModule, AppMaterialModules, FormsModule],
+      declarations: [ CoffeeListComponent]
     })
     .compileComponents();
   }));

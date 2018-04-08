@@ -1,11 +1,10 @@
+import { AppMaterialModules } from './app.material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MatButton, MatIconModule, MatInputModule, MatSelectModule,
-  MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule, MatButtonModule, MatIcon
-} from '@angular/material';
+
 import 'hammerjs';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { CoffeeListComponent } from './coffee-list/coffee-list.component';
@@ -21,9 +20,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     AppRoutes,
     FormsModule,
-    BrowserModule, BrowserAnimationsModule,
-    MatButtonModule, MatIconModule, MatInputModule, MatSelectModule,
-    MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule
+    BrowserModule, BrowserAnimationsModule, AppMaterialModules
   ],
   providers: [],
   bootstrap: [AppComponent]
