@@ -1,8 +1,5 @@
 <form name="coffeeListCreator">
-  <mat-card>
-    {{coffee | json}}
-  </mat-card>
-  
+    
   <mat-card>
     <!--About Coffee-->
     <mat-card-title>Coffee Information</mat-card-title>
@@ -63,6 +60,10 @@
     </mat-input-container>
   </mat-card>
 
+  <mat-card *ngIf="tempFormDt">
+    {{tempFormDt | json}}
+  </mat-card>
+  
   <!--Coffee CTA-->
   <mat-card>
     <button mat-raised-button (click)="cancel()">Cancel</button>
