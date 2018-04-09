@@ -9,7 +9,7 @@ import 'hammerjs';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { CoffeeListComponent } from './coffee-list/coffee-list.component';
 import { AppRoutes } from './app.routes';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     AppRoutes,
-    FormsModule,
+    ReactiveFormsModule,
     BrowserModule, BrowserAnimationsModule, AppMaterialModules
   ],
   providers: [],

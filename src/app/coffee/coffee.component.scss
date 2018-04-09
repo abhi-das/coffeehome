@@ -5,3 +5,8 @@ mat-card {
 mat-input-container, mat-select, mat-form-field, mat-slider {
     width: 100%;
 }
+.error {
+    margin-bottom: .9em;
+    display: inline-block;
+    color: red;
+}
